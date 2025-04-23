@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Defender - Tempus Innovation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/additional.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <meta name="description" content="AI Defender - An educational space shooter game by Tempus Innovation for OCEA Spring Conference 2025">
+    <meta name="theme-color" content="#0a0a2a">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div class="conference-branding">OCEA Spring Conference 2025</div>
+        <div id="loading-screen">
+            <div class="loader"></div>
+            <p>Loading AI Defender...</p>
+        </div>
+        <div id="start-screen">
+            <h1>AI Defender</h1>
+            <p>Protect the future of education with AI innovation!</p>
+            
+            <div id="welcome-form">
+                <h3>Join the AI Education Revolution!</h3>
+                <form id="player-info-form">
+                    <input type="text" id="initial-player-name" placeholder="Your Name" required>
+                    <input type="email" id="initial-player-email" placeholder="Your Email" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="initial-newsletter-signup" checked>
+                        <label for="initial-newsletter-signup">Subscribe to Tempus Innovation's AI newsletter</label>
+                    </div>
+                    <button type="submit" id="submit-info-button">Continue</button>
+                </form>
+            </div>
+            
+            <button id="start-button" style="display: none;">Start Game</button>
+            
+            <div class="instructions">
+                <h2>How to Play</h2>
+                <p>Use arrow keys or touch to move</p>
+                <p>Destroy asteroids and collect power-ups</p>
+                <p>Learn about AI while defending education's future</p>
+            </div>
+        </div>
+        <div id="game-ui">
+            <div id="score-display">Score: <span id="score">0</span></div>
+            <div id="lives-display">Lives: <span id="lives">3</span></div>
+            <div id="power-up-indicator"></div>
+            <div id="ai-fact-display"></div>
+        </div>
+        <div id="game-over-screen">
+            <h2>Game Over</h2>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <div id="high-score-form">
+                <h3>New High Score!</h3>
+                <form id="leaderboard-form">
+                    <input type="text" id="player-name" placeholder="Your Name" required>
+                    <input type="email" id="player-email" placeholder="Your Email" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="newsletter-signup" checked>
+                        <label for="newsletter-signup">Subscribe to Tempus Innovation's AI newsletter</label>
+                    </div>
+                    <button type="submit">Submit Score</button>
+                </form>
+            </div>
+            <div id="leaderboard">
+                <h3>Top Scores</h3>
+                <ul id="leaderboard-list"></ul>
+            </div>
+            <button id="play-again-button">Play Again</button>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/aiFacts.js"></script>
+    <script src="js/enhancedBackground.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/asteroids.js"></script>
+    <script src="js/enemies.js"></script>
+    <script src="js/powerups.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/leaderboard.js"></script>
+    <script src="js/emailCollection.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/mobile.js"></script>
+</body>
+</html>
